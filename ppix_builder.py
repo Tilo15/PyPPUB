@@ -177,7 +177,7 @@ if(__name__ == "__main__"):
     print("{} publication(s)".format(ix.get_publications_count()))
     print("{} tag(s)".format(ix.get_tags_count()))
     for tag in ix.get_tags():
-        print(tag);
+        print(tag)
     word = "ethics"
     col = ix.find_word_matches(word)
     if(col != None):
