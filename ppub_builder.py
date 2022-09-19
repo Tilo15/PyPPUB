@@ -15,6 +15,9 @@ class PpubBuilder:
     def add_asset(self, path, mimetype, data, flags = None, streamable = False):
         self.assets.append(BuilderAsset(path, mimetype, BytesIO(data), flags, streamable))
 
+    def add_asset_stream(self, path, mimetype, stream, flags = None, streamable = False):
+        self.assets.append(BuilderAsset(path, mimetype, stream, flags, streamable))
+
     def write_to_stream(self, stream):
         stream.write(b"ppub\n")
         data_blob = b""

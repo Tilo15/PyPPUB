@@ -9,9 +9,9 @@ class FileEntry:
 
     @staticmethod
     def from_string(string):
-        parts = string.split(":", 2)
+        parts = string.split(":", 1)
         type = parts[0]
-        parts = parts[1].split(",", 3)
+        parts = parts[1].split(",", 2)
         label = parts[0].strip()
         filename = parts[1].strip()
         
@@ -51,7 +51,7 @@ class Ppvm:
             if(line == ""):
                 break
 
-            parts = line.split(":", 2)
+            parts = line.split(":", 1)
             metadata[parts[0]] = parts[1].strip()
 
         entries = []
